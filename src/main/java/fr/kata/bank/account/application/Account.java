@@ -8,7 +8,7 @@ public interface Account {
 
 	public void deposit(Amount value, Date date);
 
-	public void withdrawal();
+	public void withdrawal(Amount value, Date date);
 
 	public void printStatement();
 	
