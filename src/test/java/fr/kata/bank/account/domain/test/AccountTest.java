@@ -32,7 +32,7 @@ public class AccountTest {
 	
 	@Test public void
 	should_add_deposit_line_to_statement() {
-		Date depositDate = date("16/01/2019");
+		Date depositDate = new Date("16/01/2019");
 		Amount depositAmount = amountOf(1000);
 		
 		account.deposit(depositAmount, depositDate);
