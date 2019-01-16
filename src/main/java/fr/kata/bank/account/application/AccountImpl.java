@@ -18,12 +18,12 @@ public class AccountImpl implements Account {
 		this.statement = statement ;
 	}
 
-	public void deposit(Amount value, Date date) {
+	public void deposit(final Amount value, final Date date) {
 		recordTransaction(value, date);
 	}
 
-	public void withdrawal() {
-		// TODO Auto-generated method stub
+	public void withdrawal(final Amount value, final Date date) {
+		recordTransaction(value.negative(), date);
 		
 	}
 

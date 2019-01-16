@@ -45,7 +45,7 @@ public class AccountTest {
 	
 	@Test public void
 	should_add_withdraw_line_to_statement() {
-		Date withdrawalDate = date("16/01/2019");
+		Date withdrawalDate = new Date("16/01/2019");
 		
 		account.withdrawal(amountOf(500), withdrawalDate);
 		
