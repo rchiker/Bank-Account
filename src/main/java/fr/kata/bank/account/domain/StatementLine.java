@@ -1,5 +1,7 @@
 package fr.kata.bank.account.domain;
 
+import java.io.PrintStream;
+
 public class StatementLine {
 
 	private Transaction transaction;
@@ -8,6 +10,10 @@ public class StatementLine {
 	public StatementLine(Transaction transaction, Amount currentBalance) {
 		this.transaction = transaction;
 		this.currentBalance = currentBalance;
+	}
+
+	public void printTo(PrintStream printer) {
+		this.transaction.printTo(printer, currentBalance);		
 	}
 
 

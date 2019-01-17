@@ -2,6 +2,7 @@ package fr.kata.bank.account.application;
 
 import static fr.kata.bank.account.domain.Amount.amountOf;
 
+import java.io.PrintStream;
 import java.util.Date;
 
 import fr.kata.bank.account.domain.Amount;
@@ -27,12 +28,12 @@ public class AccountImpl implements Account {
 		
 	}
 
-	public void printStatement() {
-		// TODO Auto-generated method stub
+	public void printHistory(final PrintStream printer) {
+		statement.printTo(printer);
 		
 	}
 	
-	private void recordTransaction(Amount value, Date date) {
+	private void recordTransaction(final Amount value, final Date date) {
 		Transaction transaction = new Transaction(value, date);
 		Amount soldeAfterTransaction = transaction.balanceAfterTransaction(solde);
 		solde = soldeAfterTransaction;

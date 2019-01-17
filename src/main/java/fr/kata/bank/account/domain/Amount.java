@@ -44,4 +44,8 @@ public class Amount {
 		return true;
 	}
 
+	public int getValue() {
+		return this.value;
+	}
+
 }

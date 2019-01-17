@@ -59,7 +59,7 @@ public class AccountTest {
 	should_print_statement() {
 		PrintStream printer = System.out;
 		
-		account.printStatement(printer);
+		account.printHistory(printer);
 		
 		verify(statement).printTo(printer);
 	}
